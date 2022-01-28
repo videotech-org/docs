@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkveedmo_docs=self.webpackChunkveedmo_docs||[]).push([[33],{1159:function(e){e.exports=JSON.parse('{"allTagsPath":"/veedmo-docs/blog/tags","slug":"/veedmo-docs/blog/tags/facebook","name":"facebook","count":1,"permalink":"/veedmo-docs/blog/tags/facebook"}')}}]);
