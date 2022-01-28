@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Veedmo',
   tagline: 'ProductsPublic Documentation',
-  url: 'https://docs.veedmo.com/',
+  url: 'https://docs.veedmo.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
