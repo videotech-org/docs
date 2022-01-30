@@ -485,7 +485,7 @@ Below there is a list of supported configuration parameters. ```*``` - mandatory
       <td>
         Customizable player branding. Branding can appear in two forms:
         <br />
-        <code>corner</code> - 20px height (proportional width) clickable image in top right corner of player (appears only on paused/finished video)
+        <code>corner</code> - 20x20px clickable image in top right corner of player (appears only on paused/finished video)
         <br />
         <code>bar</code> - 16px height bar on bottom of player (appears always, when configured - hidden by default)
         <br /><br />
