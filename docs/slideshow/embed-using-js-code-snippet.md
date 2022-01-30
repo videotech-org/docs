@@ -4,6 +4,7 @@ id: embed-using-js-code-snippet
 
 pagination_prev: null
 pagination_next: null
+custom_edit_url: null
 ---
 
 # Embed slideshow using code snippet
