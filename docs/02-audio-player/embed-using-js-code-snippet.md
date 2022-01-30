@@ -54,7 +54,7 @@ Specially prepared JavaScript code snippet (mentioned below) can be added to web
 
 ## Configuration parameters
 
-Below there is a list of supported configuration parameters. ```*``` - mandatory parameter.
+Below there is a list of supported configuration parameters. <span class="highlight--red"><strong>*</strong></span> - mandatory parameter.
 
 <table>
   <tbody>
@@ -63,13 +63,13 @@ Below there is a list of supported configuration parameters. ```*``` - mandatory
       <td><strong>Description</strong></td>
     </tr>
     <tr>
-      <td><code>partner_id</code> *</td>
+      <td><code>partner_id</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         Unique numeric ID of Veedmo partner account. <a class="nav-link" data-section-id="contact">Contact us</a> to obtain your partner account and <code>partner_id</code>.
       </td>
     </tr>
     <tr>
-      <td><code>query_selector</code> *</td>
+      <td><code>query_selector</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         JavaScript querySelector (e.g. id, class name) of the page element to inject player into.
         <br /><br />
@@ -77,7 +77,7 @@ Below there is a list of supported configuration parameters. ```*``` - mandatory
       </td>
     </tr>
     <tr>
-      <td><code>audio_url</code> *</td>
+      <td><code>audio_url</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         URL of audio file.
         <br /><br />
@@ -85,7 +85,7 @@ Below there is a list of supported configuration parameters. ```*``` - mandatory
       </td>
     </tr>
     <tr>
-      <td><code>audio_ssml</code> *</td>
+      <td><code>audio_ssml</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         Text to be read by player's AI text-to-speach mechanism (text can be passed in plain text format or <a href="https://cloud.google.com/text-to-speech/docs/ssml" target="_blank">SSML format</a>).
         <br /><br />

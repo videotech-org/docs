@@ -47,7 +47,7 @@ Specially prepared JavaScript code snippet (mentioned below) can be added to web
 
 ## Configuration parameters
 
-Below there is a list of supported configuration parameters. ```*``` - mandatory parameter.
+Below there is a list of supported configuration parameters. <span class="highlight--red"><strong>*</strong></span> - mandatory parameter.
 
 <table>
   <tbody>
@@ -56,13 +56,13 @@ Below there is a list of supported configuration parameters. ```*``` - mandatory
       <td><strong>Description</strong></td>
     </tr>
     <tr>
-      <td><code>partner_id</code> *</td>
+      <td><code>partner_id</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         Unique numeric ID of Veedmo partner account. <a class="nav-link" data-section-id="contact">Contact us</a> to obtain your partner account and <code>partner_id</code>.
       </td>
     </tr>
     <tr>
-      <td><code>query_selector</code> *</td>
+      <td><code>query_selector</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         JavaScript querySelector (e.g. id, class name) of the page element to inject slideshow into.
         <br /><br />
@@ -70,7 +70,7 @@ Below there is a list of supported configuration parameters. ```*``` - mandatory
       </td>
     </tr>
     <tr>
-      <td><code>rss_url</code> *</td>
+      <td><code>rss_url</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         URL of RSS feed to generate slideshow from.
       </td>
@@ -79,6 +79,8 @@ Below there is a list of supported configuration parameters. ```*``` - mandatory
       <td><code>slide_duration</code></td>
       <td>
         Time duration of showing single slide (in seconds).
+        <br /><br />
+        If not defined, <strong>4 seconds</strong> will be used.
       </td>
     </tr>
     <tr>
@@ -86,7 +88,7 @@ Below there is a list of supported configuration parameters. ```*``` - mandatory
       <td>
         Max. number of slides to be shown in slideshow.
         <br /><br />
-        If not defined, <strong>10</strong> will be used.
+        If not defined, <strong>6</strong> will be used.
       </td>
     </tr>
     <tr>

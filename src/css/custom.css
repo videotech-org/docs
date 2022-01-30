@@ -27,6 +27,10 @@ table tr {
   background-color: var(--ifm-color-white) !important;
 }
 
+.highlight--red {
+  color: #ff0000;
+}
+
 /* ********************************* */
 /* Header */
 /* ********************************* */

@@ -61,7 +61,7 @@ Specially prepared JavaScript code snippet (mentioned below) can be added to web
 
 ## Configuration parameters
 
-Below there is a list of supported configuration parameters. ```*``` - mandatory parameter.
+Below there is a list of supported configuration parameters. <span class="highlight--red"><strong>*</strong></span> - mandatory parameter.
 
 <table>
   <tbody>
@@ -70,13 +70,13 @@ Below there is a list of supported configuration parameters. ```*``` - mandatory
       <td><strong>Description</strong></td>
     </tr>
     <tr>
-      <td><code>partner_id</code> *</td>
+      <td><code>partner_id</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         Unique numeric ID of Veedmo partner account. <a class="nav-link" data-section-id="contact">Contact us</a> to obtain your partner account and <code>partner_id</code>.
       </td>
     </tr>
     <tr>
-      <td><code>query_selector</code> *</td>
+      <td><code>query_selector</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         JavaScript querySelector (e.g. id, class name) of the page element to inject player into.
         <br /><br />
@@ -84,7 +84,7 @@ Below there is a list of supported configuration parameters. ```*``` - mandatory
       </td>
     </tr>
     <tr>
-      <td><code>ad_type</code> *</td>
+      <td><code>ad_type</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         Possible values:
         <br />
@@ -94,7 +94,7 @@ Below there is a list of supported configuration parameters. ```*``` - mandatory
       </td>
     </tr>
     <tr>
-      <td><code>tag_url_desktop</code> *</td>
+      <td><code>tag_url_desktop</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         URL(s) of ad tag(s), or pure XML(s) content of ad(s), to display on desktop devices. If empty, no ad(s) will be displayed on desktop devices.
         <br /><br />
@@ -127,7 +127,7 @@ Below there is a list of supported configuration parameters. ```*``` - mandatory
       </td>
     </tr>
     <tr>
-      <td><code>tag_url_mobile</code> *</td>
+      <td><code>tag_url_mobile</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         URL(s) of ad tag(s), or pure XML(s) content of ad(s), to display on mobile devices. If empty, no ad(s) will be displayed on mobile devices.
         <br /><br />
@@ -160,13 +160,13 @@ Below there is a list of supported configuration parameters. ```*``` - mandatory
       </td>
     </tr>
     <tr>
-      <td><code>video_url</code> *</td>
+      <td><code>video_url</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         URL of video file. Mandatory, if <code>ad_type</code> is set to <strong>1</strong>. Optional, if <code>ad_type</code> is set to <strong>0</strong>.
       </td>
     </tr>
     <tr>
-      <td><code>responsive</code> *</td>
+      <td><code>responsive</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         Possible values:
         <br />
