@@ -428,6 +428,26 @@ Below there is a list of supported configuration parameters. <span class="highli
       </td>
     </tr>
     <tr>
+      <td><code>ad_empty_player</code></td>
+      <td>
+        Fallback called when no pre-roll ad will be returned by ad server, allowing to load alternative player config (e.g. if in-stream ad won't be returned by ad server, fallback to out-stream ad).
+        <br /><br />
+        Example (fallback in-stream to out-stream):
+        <code>
+          "ad_empty_player": {"{"}
+          <br />
+          &nbsp;&nbsp;"ad_type": 0, // out-stream ads
+          <br />
+          &nbsp;&nbsp;"tag_url_desktop": "AD_TAG_1 URL",
+          <br />
+          &nbsp;&nbsp;"tag_url_mobile": "AD_TAG_2 URL",
+          <br />
+          {"}"}
+        </code>
+        If not defined, it is not used.
+      </td>
+    </tr>
+    <tr>
       <td><code>enable_sticky_on_outside_viewport</code></td>
       <td>
         Sticky mode (<code>position</code> set to <strong>3</strong>) behaviour depending on ad status and player visibility in viewport.
@@ -508,7 +528,7 @@ Below there is a list of supported configuration parameters. <span class="highli
 
 Below there is an the example showing how Veedmo video player can be embedded on page using manual JavaScript configuration. Click on "Result" tab to see the result.
 
-<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qfroesdy/92/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qfroesdy/95/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ## Macros
 

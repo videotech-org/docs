@@ -15,6 +15,8 @@ custom_edit_url: null
 
 Welcome to Veedmo's products documentation.
 
+If you'd need any help or have questions, do not hesitate to contact us: **[hello@veedmo.com](mailto:hello@veedmo.com)**
+
 ## Getting Started
 
 Our documentation is here to help you configure and deliver best rich media experiences with most powerful and performance optimized solutions on the web.
