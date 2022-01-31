@@ -44,6 +44,13 @@ const config = {
           alt: 'Veedmo',
           src: 'img/logo.svg',
         },
+        items: [
+          {
+            label: 'veedmo.com',
+            href: 'https://veedmo.com',
+            position: 'right'
+          },
+        ],
       },
       footer: {
         style: 'light',

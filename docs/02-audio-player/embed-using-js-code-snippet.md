@@ -385,4 +385,4 @@ Below there is a list of supported configuration parameters. <span class="highli
 
 Below there is an the example showing how Veedmo audio player can be embedded on page using manual JavaScript configuration. Click on "Result" tab to see the result.
 
-<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/kL9zy4jf/49/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/kL9zy4jf/51/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>

@@ -45,6 +45,10 @@ table tr {
   color: var(--ifm-color-black);
 }
 
+.navbar-sidebar__brand > div {
+  display: none !important;
+}
+
 .navbar__logo img {
   width: 130px;
 }
@@ -53,7 +57,7 @@ table tr {
   font-weight: normal !important;
 }
 
-.navbar__items--right {
+.navbar__items--right > div {
   display: none !important;
 }
 
