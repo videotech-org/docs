@@ -264,7 +264,7 @@ Below there is a list of supported configuration parameters. <span class="highli
         <br />
         <strong>2</strong> - player (floating) will appear in corner of the screen (corner defined in <code>corner</code> param)
         <br />
-        <strong>3</strong> - player will appear in page content, and switch to sticky (floating) mode when min. 50% of player height will be out of browser's viewport (sticky mode screen corner is defined in <code>corner</code> param)
+        <strong>3</strong> - player will appear in page content, and switch to floating mode when min. 50% of player height will be out of browser's viewport (floating mode screen corner is defined in <code>corner</code> param)
         <br /><br />
         If not defined, <strong>1</strong> (in page content) will be used.
         <br /><br />
@@ -354,9 +354,23 @@ Below there is a list of supported configuration parameters. <span class="highli
     <tr>
       <td><code>close_btn_time_offset</code></td>
       <td>
-        Time after which X button will appear in player, in milliseconds (ms). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>, or <code>ad_type</code> is set to <strong>0</strong>.
+        Time after which X button will appear in floating player, in milliseconds (ms). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>, or <code>ad_type</code> is set to <strong>0</strong>.
         <br /><br />
         If not defined, <strong>3000</strong> (3sec) will be used.
+      </td>
+    </tr>
+    <tr>
+      <td><code>close_button_skip_ad</code></td>
+      <td>
+        To maximize ad impressions, X button (closing player's floating mode - when <code>position</code> is set to <strong>2</strong> or <strong>3</strong>) can be used to skip ads (or ad pods) instead of direcly closing floating mode (and decreasing chances to more ad impressions).
+        <br /><br />
+        Possible values:
+        <br />
+        <strong>0</strong> - do not skip ads (or ad pods) on click in X button (floating mode)
+        <br />
+        <strong>1</strong> - skip ads (or ad pods) on click in X button (floating mode)
+        <br /><br />
+        If not defined, <strong>0</strong> (do not skip ads on clicks in X button) will be used.
       </td>
     </tr>
     <tr>
@@ -394,19 +408,19 @@ Below there is a list of supported configuration parameters. <span class="highli
     <tr>
       <td><code>ad_empty_or_played_disable_sticky</code></td>
       <td>
-        Sticky mode (<code>position</code> set to <strong>3</strong>) behaviour depending on ad status.
+        Floating mode (<code>position</code> set to <strong>3</strong>) behaviour depending on ad status.
         <br /><br />
         Possible values:
         <br />
-        <strong>0</strong> - player will always switch to sticky mode
+        <strong>0</strong> - player will always switch to floating mode
         <br />
-        <strong>1</strong> - player will switch to sticky mode:
+        <strong>1</strong> - player will switch to floating mode:
         <br />
         - if ad returned by ad server was not empty, or there was no ad error
         <br />
         - until last ad returned by ad server, has finished to play
         <br /><br />
-        If not defined, <strong>0</strong> (always switch to sticky mode) will be used.
+        If not defined, <strong>0</strong> (always switch to floating mode) will be used.
         <br /><br />
         Recommended setting: <strong>1</strong> (to maximize ad viewability, and not annoy visitor).
       </td>
@@ -450,15 +464,15 @@ Below there is a list of supported configuration parameters. <span class="highli
     <tr>
       <td><code>enable_sticky_on_outside_viewport</code></td>
       <td>
-        Sticky mode (<code>position</code> set to <strong>3</strong>) behaviour depending on ad status and player visibility in viewport.
+        Floating mode (<code>position</code> set to <strong>3</strong>) behaviour depending on ad status and player visibility in viewport.
         <br /><br />
         Possible values:
         <br />
-        <strong>0</strong> - player will switch to sticky mode after page visitor will pass it, while scrolling the page
+        <strong>0</strong> - player will switch to floating mode after page visitor will pass it, while scrolling the page
         <br />
-        <strong>1</strong> - player will switch to sticky mode after page visitor will pass it, while scrolling the page, and additionally straight after player was loaded on page (only if ad was returned by ad server, and player was loaded on page out of viewport)
+        <strong>1</strong> - player will switch to floating mode after page visitor will pass it, while scrolling the page, and additionally straight after player was loaded on page (only if ad was returned by ad server, and player was loaded on page out of viewport)
         <br /><br />
-        If not defined, <strong>0</strong> (switch to sticky mode after page visitor will pass player, while scrolling the page) will be used.
+        If not defined, <strong>0</strong> (switch to floating mode after page visitor will pass player, while scrolling the page) will be used.
         <br /><br />
         Recommended setting: <strong>1</strong> (to maximize ad viewability).
       </td>
@@ -506,9 +520,9 @@ Below there is a list of supported configuration parameters. <span class="highli
       <td>
         Customizable player branding. Branding can appear in two forms:
         <br />
-        <code>corner</code> - 20x20px clickable image in top right corner of player (appears only on paused/finished video)
+        <code>corner</code> - 20px height (max. 70px width) clickable image in top right corner of player (appears only on paused/finished video)
         <br />
-        <code>bar</code> - 16px height bar on bottom of player (appears always, when configured - hidden by default)
+        <code>bar</code> - 16px height bar (with 10px height image) on bottom of player (appears always, when configured - hidden by default)
         <br /><br />
         <code>corner</code> and <code>bar</code> are objects, with 3 configurable parameters each:
         <br />
