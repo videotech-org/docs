@@ -360,7 +360,7 @@ Below there is a list of supported configuration parameters. <span class="highli
       </td>
     </tr>
     <tr>
-      <td><code>close_button_skip_ad</code></td>
+      <td><code>close_btn_skip_ad</code></td>
       <td>
         To maximize ad impressions, X button (closing player's floating mode - when <code>position</code> is set to <strong>2</strong> or <strong>3</strong>) can be used to skip ads (or ad pods) instead of direcly closing floating mode (and decreasing chances to more ad impressions).
         <br /><br />
