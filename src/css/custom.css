@@ -1,6 +1,7 @@
 /* ********************************* */
 /* General */
 /* ********************************* */
+
 :root {
   --ifm-code-font-size: 90%;
   --ifm-color-primary: #2962ff;
@@ -120,4 +121,26 @@ table tr {
 
 .footer {
   background-color: var(--ifm-color-white);
+}
+
+/* ********************************* */
+/* Custom styling for HTML elements */
+/* ********************************* */
+
+.columns {
+  display: inline-flex;
+  margin: 1em 0;
+  align-items: center;
+  width: 100%;
+}
+
+.columns.col-2 > div {
+  display: inline-flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.columns.col-2 > div p {
+  width: 100%;
+  margin-bottom: 0.5em;
 }

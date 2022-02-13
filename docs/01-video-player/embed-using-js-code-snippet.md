@@ -53,9 +53,9 @@ Specially prepared JavaScript code snippet (mentioned below) can be added to web
   "vertical_margin": 20,
   "horizontal_margin": 20,
   "minimum_width": 140,
-  "maximum_width": 500,
-  "maximum_width_percent": 30,
-  "maximum_height_percent_mobile": 30,
+  "maximum_width": 400,
+  "maximum_width_percent": 25,
+  "maximum_height_percent_mobile": 25,
 });
 ```
 
