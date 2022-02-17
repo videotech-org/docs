@@ -92,9 +92,83 @@ Below there is a list of supported configuration parameters. <span class="highli
       </td>
     </tr>
     <tr>
+      <td><code>position</code></td>
+      <td>
+        Set slider position on page (in page content, floating, in page content + floating).
+        <br /><br />
+        Possible values:
+        <br /><br />
+        <code>type</code> param:
+        <br />
+        <strong>1</strong> - in page content
+        <br />
+        <strong>2</strong> - floating (floating slideshow corner and distance set by <code>corner</code> and <code>vertical_margin</code> and <code>horizontal_margin</code> params)
+        <br />
+        <strong>3</strong> - in page content + floating (floating slideshow corner and distance set by <code>corner</code> and <code>vertical_margin</code> and <code>horizontal_margin</code> params)
+        <br /><br />
+        <code>corner</code> param:
+        <br />
+        <strong>bl</strong> - bottom left corner of the screen
+        <br />
+        <strong>br</strong> - bottom right corner of the screen
+        <br />
+        <strong>tl</strong> - top left corner of the screen
+        <br />
+        <strong>tr</strong> - top right corner of the screen
+        <br /><br />
+        <code>vertical_margin</code> - floating slideshow distance from top / bottom (depending on set <code>corner</code> param value) edge of the screen, in pixels (px) or percent (%). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>
+        <br />
+        <code>horizontal_margin</code> - floating slideshow distance from left / right (depending on set <code>corner</code> param value) edge of the screen, in pixels (px) or percent (%). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>
+        <br />
+        <code>max_width</code> - floating slideshow max. width,in pixels (px) or percent (%). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>
+        <br />
+        <code>min_width</code> - floating slideshow min. width,in pixels (px) or percent (%). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>
+        <br /><br />
+        Example:
+        <br />
+        <code>
+        "position": {"{"}<br />
+        &nbsp;&nbsp;"type": 3,<br />
+        &nbsp;&nbsp;"config": {"{"}<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"corner": "br",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"vertical_margin": "20px",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"horizontal_margin": "20px",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"max_width": "20%",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"min_width": "300px",<br />
+        &nbsp;&nbsp;},<br />
+        },
+        </code>
+        If not defined, slideshow will appear in page content (without floating mode).
+      </td>
+    </tr>
+    <tr>
       <td><code>theme_color</code></td>
       <td>
         Slideshow theme color, used on: progress bars, title bar, hover on controls - HEX RGB (e.g. FF0000) or text value (e.g. red).
+      </td>
+    </tr>
+    <tr>
+      <td><code>show_items_without_img</code></td>
+      <td>
+        Possible values:
+        <br />
+        <strong>0</strong> - do not show, in slideshow, items from RSS feed which do not have image
+        <br />
+        <strong>1</strong> - show, in slideshow, items from RSS feed which do not have image
+        <br /><br />
+        If not defined, <strong>0</strong> (do not show items without image) will be used.
+      </td>
+    </tr>
+    <tr>
+      <td><code>open_links_in_new_tab</code></td>
+      <td>
+        Possible values:
+        <br />
+        <strong>0</strong> - open slides' links in the same tab (as slideshow)
+        <br />
+        <strong>1</strong> - open slides' links in the new tab
+        <br /><br />
+        If not defined, <strong>1</strong> (open slides' links in the new tab) will be used.
       </td>
     </tr>
     <tr>
@@ -159,18 +233,6 @@ Below there is a list of supported configuration parameters. <span class="highli
       </td>
     </tr>
     <tr>
-      <td><code>show_items_without_img</code></td>
-      <td>
-        Possible values:
-        <br />
-        <strong>0</strong> - do not show, in slideshow, items from RSS feed which do not have image
-        <br />
-        <strong>1</strong> - show, in slideshow, items from RSS feed which do not have image
-        <br /><br />
-        If not defined, <strong>0</strong> (do not show items without image) will be used.
-      </td>
-    </tr>
-    <tr>
       <td><code>branding</code></td>
       <td>
         Customizable slideshow branding. Branding appears as 32px height (proportional width) clickable image in top right corner of slideshow.
@@ -193,4 +255,4 @@ Below there is a list of supported configuration parameters. <span class="highli
 
 Below there is an the example showing how Veedmo slideshow can be embedded on page using manual JavaScript configuration. Click on "Result" tab to see the result.
 
-<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qex6ckLm/11/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qex6ckLm/17/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
