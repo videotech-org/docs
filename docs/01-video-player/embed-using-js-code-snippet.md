@@ -9,7 +9,7 @@ custom_edit_url: null
 
 # Embed video player using code snippet
 
-To embed Veedmo video player using manual JavaScript configuration you need to add, to your website, specially prepared JavaScript code snippet and manually set all player options in it.
+To embed Veedmo video player using manual JavaScript configuration you need to add, to your website, specially prepared JavaScript code snippet and manually set all configuration options in it.
 
 ## JavaScript code snippet (sample)
 

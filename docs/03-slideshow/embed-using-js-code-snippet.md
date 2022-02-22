@@ -9,7 +9,15 @@ custom_edit_url: null
 
 # Embed slideshow using code snippet
 
-To embed Veedmo slideshow using manual JavaScript configuration you need to add, to your website, specially prepared JavaScript code snippet and manually set all player options in it.
+To embed Veedmo slideshow using manual JavaScript configuration you need to add, to your website, specially prepared JavaScript code snippet and manually set all configuration options in it.
+
+:::caution Important
+
+In some cases, Veedmo slideshow might be blocked by [CORS](https://www.w3.org/wiki/CORS_Enabled) mechanism and do not load RSS feed - such situation can happen when RSS feed (set in ```rss_url``` param) is hosted in different domain (e.g. domain-1.com) than Veedmo slideshow was loaded (e.g. domain-2.com).
+
+To resolve this problem, and make Veedmo slideshow to load RSS feed correctly, the server hosting RSS feed (e.g. domain-1.com), should add domain on which Veedmo slideshow is loaded (e.g. domain-2.com) to CORS whitelist (property **Access-Control-Allow-Origin**).
+
+:::
 
 ## JavaScript code snippet (sample)
 
