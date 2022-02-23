@@ -263,4 +263,4 @@ Below there is a list of supported configuration parameters. <span class="highli
 
 Below there is an the example showing how Veedmo slideshow can be embedded on page using manual JavaScript configuration. Click on "Result" tab to see the result.
 
-<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qex6ckLm/17/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qex6ckLm/18/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>

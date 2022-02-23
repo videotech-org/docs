@@ -88,9 +88,9 @@ Below there is a list of supported configuration parameters. <span class="highli
       <td>
         Possible values:
         <br />
-        <strong>0</strong> - out-stream (in this case, there is no need to specify <code>video_url</code> param - can be empty)
+        <strong>0</strong> - outstream (in this case, there is no need to specify <code>video_url</code> param - can be empty)
         <br />
-        <strong>1</strong> - in-stream (in this case, <code>video_url</code> param has to be set too)
+        <strong>1</strong> - instream (in this case, <code>video_url</code> param has to be set too)
       </td>
     </tr>
     <tr>
@@ -444,13 +444,13 @@ Below there is a list of supported configuration parameters. <span class="highli
     <tr>
       <td><code>ad_empty_player</code></td>
       <td>
-        Fallback called when no pre-roll ad will be returned by ad server, allowing to load alternative player config (e.g. if in-stream ad won't be returned by ad server, fallback to out-stream ad).
+        Fallback called when no pre-roll ad will be returned by ad server, allowing to load alternative player config (e.g. if instream ad won't be returned by ad server, fallback to outstream ad).
         <br /><br />
-        Example (fallback in-stream to out-stream):
+        Example (fallback instream to outstream):
         <code>
           "ad_empty_player": {"{"}
           <br />
-          &nbsp;&nbsp;"ad_type": 0, // out-stream ads
+          &nbsp;&nbsp;"ad_type": 0, // outstream ads
           <br />
           &nbsp;&nbsp;"tag_url_desktop": "AD_TAG_1 URL",
           <br />
@@ -542,7 +542,7 @@ Below there is a list of supported configuration parameters. <span class="highli
 
 Below there is an the example showing how Veedmo video player can be embedded on page using manual JavaScript configuration. Click on "Result" tab to see the result.
 
-<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qfroesdy/95/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qfroesdy/97/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ## Macros
 

@@ -34,7 +34,7 @@ Following are brief descriptions of our product offerings. All products can be u
     <h3>Video player</h3>
     <p>Fast and lightweight</p>
     <p>Google Ad Manager integration</p>
-    <p>Multiple ad formats (in/out-stream, VAST, VMAP)</p>
+    <p>Multiple ad formats (in/outstream, VAST, VMAP)</p>
     <p>Ads waterfall and ads schedule mechanisms</p>
     <p>Ad fallback</p>
     <p>Whitelabel and customization</p>
@@ -48,7 +48,7 @@ Following are brief descriptions of our product offerings. All products can be u
   <div>
     <h3>Audio player</h3>
     <p>Easy and scalable deployment</p>
-    <p>Ad support (in-stream, VAST, VMAP)</p>
+    <p>Ad support (instream, VAST, VMAP)</p>
     <p>Google Ad Manager integration</p>
     <p>Text-to-speach (40+ languages)</p>
     <p>Whitelabel and rich customization</p>
@@ -63,7 +63,7 @@ Following are brief descriptions of our product offerings. All products can be u
     <h3>Slideshow</h3>
     <p>Convert static content to rich media</p>
     <p>Easy and scalable deployment</p>
-    <p>Ad support (out-stream, VAST)</p>
+    <p>Ad support (outstream, VAST)</p>
     <p>Google Ad Manager integration</p>
     <p>Customization</p>
   </div>
