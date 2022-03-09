@@ -101,11 +101,23 @@ Below there is a list of supported configuration parameters. <span class="highli
         <br /><br />
         Possible values:
         <br />
-        <strong>pl</strong> - Polish language
+        <strong>en</strong> - English
         <br />
-        <strong>en</strong> - English language
+        <strong>th</strong> - Thai
         <br />
-        <strong>th</strong> - Thai language
+        <strong>dk</strong> - Danish
+        <br />
+        <strong>es</strong> - Spanish
+        <br />
+        <strong>it</strong> - Italian
+        <br />
+        <strong>de</strong> - German
+        <br />
+        <strong>fr</strong> - French
+        <br />
+        <strong>se</strong> - Swedish
+        <br />
+        <strong>no</strong> - Norwegian
         <br /><br />
         If not defined, English language will be used.
       </td>
