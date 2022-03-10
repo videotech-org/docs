@@ -23,11 +23,11 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Slideshow',
+      label: 'Automatic stories',
       collapsible: false,
       collapsed: false,
       items: [
-        'slideshow/embed-using-js-code-snippet',
+        'stories/embed-using-js-code-snippet',
       ]
     },
   ],

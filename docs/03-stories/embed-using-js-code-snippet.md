@@ -7,15 +7,15 @@ pagination_next: null
 custom_edit_url: null
 ---
 
-# Embed slideshow using code snippet
+# Embed stories using code snippet
 
-To embed Veedmo slideshow using manual JavaScript configuration you need to add, to your website, specially prepared JavaScript code snippet and manually set all configuration options in it.
+To embed Veedmo stories using manual JavaScript configuration you need to add, to your website, specially prepared JavaScript code snippet and manually set all configuration options in it.
 
 :::caution Important
 
-In some cases, Veedmo slideshow might be blocked by [CORS](https://www.w3.org/wiki/CORS_Enabled) mechanism and do not load RSS feed - such situation can happen when RSS feed (set in ```rss_url``` param) is hosted in different domain (e.g. domain-1.com) than Veedmo slideshow was loaded (e.g. domain-2.com).
+In some cases, Veedmo stories might be blocked by [CORS](https://www.w3.org/wiki/CORS_Enabled) mechanism and do not load RSS feed - such situation can happen when RSS feed (set in ```rss_url``` param) is hosted in different domain (e.g. domain-1.com) than Veedmo stories were loaded (e.g. domain-2.com).
 
-To resolve this problem, and make Veedmo slideshow to load RSS feed correctly, the server hosting RSS feed (e.g. domain-1.com), should add domain on which Veedmo slideshow is loaded (e.g. domain-2.com) to CORS whitelist (property **Access-Control-Allow-Origin**).
+To resolve this problem, and make Veedmo stories to load RSS feed correctly, the server hosting RSS feed (e.g. domain-1.com), should add domain on which Veedmo stories are loaded (e.g. domain-2.com) to CORS whitelist (property **Access-Control-Allow-Origin**).
 
 :::
 
@@ -72,7 +72,7 @@ Below there is a list of supported configuration parameters. <span class="highli
     <tr>
       <td><code>query_selector</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
-        JavaScript querySelector (e.g. id, class name) of the page element to inject slideshow into.
+        JavaScript querySelector (e.g. id, class name) of the page element to inject stories into.
         <br /><br />
         IMPORTANT: do not use <strong>veedmo</strong> as your query selector name as it is system reserved name.
       </td>
@@ -80,7 +80,7 @@ Below there is a list of supported configuration parameters. <span class="highli
     <tr>
       <td><code>rss_url</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
-        URL of RSS feed to generate slideshow from.
+        URL of RSS feed to generate stories from.
       </td>
     </tr>
     <tr>
@@ -94,7 +94,7 @@ Below there is a list of supported configuration parameters. <span class="highli
     <tr>
       <td><code>max_slides_amount</code></td>
       <td>
-        Max. number of slides to be shown in slideshow.
+        Max. number of slides to be shown in stories.
         <br /><br />
         If not defined, <strong>6</strong> will be used.
       </td>
@@ -110,9 +110,9 @@ Below there is a list of supported configuration parameters. <span class="highli
         <br />
         <strong>1</strong> - in page content
         <br />
-        <strong>2</strong> - floating (floating slideshow corner and distance set by <code>corner</code> and <code>vertical_margin</code> and <code>horizontal_margin</code> params)
+        <strong>2</strong> - floating (floating stories corner and distance set by <code>corner</code> and <code>vertical_margin</code> and <code>horizontal_margin</code> params)
         <br />
-        <strong>3</strong> - in page content + floating (floating slideshow corner and distance set by <code>corner</code> and <code>vertical_margin</code> and <code>horizontal_margin</code> params)
+        <strong>3</strong> - in page content + floating (floating stories corner and distance set by <code>corner</code> and <code>vertical_margin</code> and <code>horizontal_margin</code> params)
         <br /><br />
         <code>corner</code> param:
         <br />
@@ -124,13 +124,13 @@ Below there is a list of supported configuration parameters. <span class="highli
         <br />
         <strong>tr</strong> - top right corner of the screen
         <br /><br />
-        <code>vertical_margin</code> - floating slideshow distance from top / bottom (depending on set <code>corner</code> param value) edge of the screen, in pixels (px) or percent (%). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>
+        <code>vertical_margin</code> - floating stories distance from top / bottom (depending on set <code>corner</code> param value) edge of the screen, in pixels (px) or percent (%). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>
         <br />
-        <code>horizontal_margin</code> - floating slideshow distance from left / right (depending on set <code>corner</code> param value) edge of the screen, in pixels (px) or percent (%). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>
+        <code>horizontal_margin</code> - floating stories distance from left / right (depending on set <code>corner</code> param value) edge of the screen, in pixels (px) or percent (%). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>
         <br />
-        <code>max_width</code> - floating slideshow max. width,in pixels (px) or percent (%). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>
+        <code>max_width</code> - floating stories max. width,in pixels (px) or percent (%). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>
         <br />
-        <code>min_width</code> - floating slideshow min. width,in pixels (px) or percent (%). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>
+        <code>min_width</code> - floating stories min. width,in pixels (px) or percent (%). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>
         <br /><br />
         Example:
         <br />
@@ -146,13 +146,13 @@ Below there is a list of supported configuration parameters. <span class="highli
         &nbsp;&nbsp;},<br />
         },
         </code>
-        If not defined, slideshow will appear in page content (without floating mode).
+        If not defined, stories will appear in page content (without floating mode).
       </td>
     </tr>
     <tr>
       <td><code>theme_color</code></td>
       <td>
-        Slideshow theme color, used on: progress bars, title bar, hover on controls - HEX RGB (e.g. FF0000) or text value (e.g. red).
+        Stories theme color, used on: progress bars, title bar, hover on controls - HEX RGB (e.g. FF0000) or text value (e.g. red).
       </td>
     </tr>
     <tr>
@@ -160,9 +160,9 @@ Below there is a list of supported configuration parameters. <span class="highli
       <td>
         Possible values:
         <br />
-        <strong>0</strong> - do not show, in slideshow, items from RSS feed which do not have image
+        <strong>0</strong> - do not show, in stories, items from RSS feed which do not have image
         <br />
-        <strong>1</strong> - show, in slideshow, items from RSS feed which do not have image
+        <strong>1</strong> - show, in stories, items from RSS feed which do not have image
         <br /><br />
         If not defined, <strong>0</strong> (do not show items without image) will be used.
       </td>
@@ -172,7 +172,7 @@ Below there is a list of supported configuration parameters. <span class="highli
       <td>
         Possible values:
         <br />
-        <strong>0</strong> - open slides' links in the same tab (as slideshow)
+        <strong>0</strong> - open slides' links in the same tab (as stories)
         <br />
         <strong>1</strong> - open slides' links in the new tab
         <br /><br />
@@ -182,7 +182,7 @@ Below there is a list of supported configuration parameters. <span class="highli
     <tr>
       <td><code>max_number_of_injected_ads</code></td>
       <td>
-        Max. number of ads injected in slideshow. Cannot be greater than <code>max_slides_amount</code>.
+        Max. number of ads injected in stories. Cannot be greater than <code>max_slides_amount</code>.
         <br /><br />
         Ad is injected after slide.
       </td>
@@ -243,7 +243,7 @@ Below there is a list of supported configuration parameters. <span class="highli
     <tr>
       <td><code>branding</code></td>
       <td>
-        Customizable slideshow branding. Branding appears as 32px height (proportional width) clickable image in top right corner of slideshow.
+        Customizable stories branding. Branding appears as 32px height (proportional width) clickable image in top right corner of stories.
         <br /><br />
         <code>corner</code> branding is an object, with 3 configurable parameters:
         <br />
@@ -253,7 +253,7 @@ Below there is a list of supported configuration parameters. <span class="highli
         <br />
         <strong>image</strong> - URL of image (formats: *.jpg, *.png, *.svg) which will appear in corner
         <br /><br />
-        If not defined, only <strong>Powered by Veedmo</strong> will appear in top right corner of slideshow.
+        If not defined, only <strong>Powered by Veedmo</strong> will appear in top right corner of stories.
       </td>
     </tr>
   </tbody>
@@ -261,6 +261,6 @@ Below there is a list of supported configuration parameters. <span class="highli
 
 ## Live example
 
-Below there is an the example showing how Veedmo slideshow can be embedded on page using manual JavaScript configuration. Click on "Result" tab to see the result.
+Below there is an the example showing how Veedmo stories can be embedded on page using manual JavaScript configuration. Click on "Result" tab to see the result.
 
-<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qex6ckLm/18/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qex6ckLm/19/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>

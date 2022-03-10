@@ -60,7 +60,7 @@ Following are brief descriptions of our product offerings. All products can be u
 
 <div class="columns col-2">
   <div>
-    <h3>Slideshow</h3>
+    <h3>Automatic stories</h3>
     <p>Convert static content to rich media</p>
     <p>Easy and scalable deployment</p>
     <p>Ad support (outstream, VAST)</p>
@@ -68,6 +68,6 @@ Following are brief descriptions of our product offerings. All products can be u
     <p>Customization</p>
   </div>
   <div>
-    <img src="/img/veedmo-slideshow.jpg" />
+    <img src="/img/veedmo-stories.jpg" />
   </div>
 </div>
