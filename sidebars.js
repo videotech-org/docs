@@ -23,7 +23,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Automatic stories',
+      label: 'Stories',
       collapsible: false,
       collapsed: false,
       items: [

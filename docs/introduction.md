@@ -60,7 +60,7 @@ Following are brief descriptions of our product offerings. All products can be u
 
 <div class="columns col-2">
   <div>
-    <h3>Automatic stories</h3>
+    <h3>Stories</h3>
     <p>Convert static content to rich media</p>
     <p>Easy and scalable deployment</p>
     <p>Ad support (outstream, VAST)</p>
