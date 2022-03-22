@@ -538,12 +538,6 @@ Below there is a list of supported configuration parameters. <span class="highli
   </tbody>
 </table>
 
-## Live example
-
-Below there is an the example showing how Veedmo video player can be embedded on page using manual JavaScript configuration. Click on "Result" tab to see the result.
-
-<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qfroesdy/97/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
-
 ## Macros
 
 <table>
@@ -594,3 +588,15 @@ Below there is an the example showing how Veedmo video player can be embedded on
     </tr>
   </tbody>
 </table>
+
+## Live example
+
+Below there is an the example showing how Veedmo video player can be embedded on page using manual JavaScript configuration. Click on "Result" tab to see the result.
+
+### Instream player example
+
+<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qfroesdy/99/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+### Outstream player example
+
+<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/tsL3z72m/7/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
