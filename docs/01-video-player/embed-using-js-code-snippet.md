@@ -430,6 +430,8 @@ Below there is a list of supported configuration parameters. <span class="highli
       <td>
         Callback funtion called when no pre-roll ad will be returned by ad server, or visitor has ad block enabled and ad cannot be obtained from ad server.
         <br /><br />
+        If both, <code>ad_empty_callback</code> and <code>ad_empty_player</code> are defined, <code>ad_empty_player</code> has priority, and launches as first.
+        <br /><br />
         Example:
         <code>
           "ad_empty_callback": function() {"{"}
@@ -445,6 +447,8 @@ Below there is a list of supported configuration parameters. <span class="highli
       <td><code>ad_empty_player</code></td>
       <td>
         Fallback called when no pre-roll ad will be returned by ad server, allowing to load alternative player config (e.g. if instream ad won't be returned by ad server, fallback to outstream ad).
+        <br /><br />
+        If both, <code>ad_empty_callback</code> and <code>ad_empty_player</code> are defined, <code>ad_empty_player</code> has priority, and launches as first.
         <br /><br />
         Example (fallback instream to outstream):
         <code>
