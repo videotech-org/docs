@@ -330,6 +330,24 @@ Below there is a list of supported configuration parameters. <span class="highli
       </td>
     </tr>
     <tr>
+      <td><code>aspect_ratio</code></td>
+      <td>
+        Player's aspect ratio.
+        <br /><br />
+        Possible values:
+        <br />
+        <strong>16:9</strong>
+        <br />
+        <strong>4:3</strong>
+        <br />
+        <strong>1:1</strong>
+        <br />
+        <strong>9:16</strong>
+        <br /><br />
+        If not defined, player will use video's aspect ratio and scale automatically to it.
+      </td>
+    </tr>
+    <tr>
       <td><code>block_if_adblock</code></td>
       <td>
         Player behaviour when adblock is detected in browser, and <code>tag_url_desktop</code> or <code>tag_url_mobile</code> are set.
@@ -599,7 +617,7 @@ Below there is an the example showing how Veedmo video player can be embedded on
 
 ### Instream player example
 
-<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qfroesdy/99/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qfroesdy/104/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ### Outstream player example
 
