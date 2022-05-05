@@ -31,7 +31,7 @@ Specially prepared JavaScript code snippet (mentioned below) can be added to web
       var script = document.createElement("script");
       script.src = "https://cdn.veedmo-static.com/cdn/slideshow/v1/current.js";
       document.body ? document.body.appendChild(script) : document.head.appendChild(script);
-      script.addEventListener("load", () => {
+      script.addEventListener("load", function() {
         window.veedmoSlider(config);
       });
     } else {
@@ -41,7 +41,7 @@ Specially prepared JavaScript code snippet (mentioned below) can be added to web
 })({
   "partner_id": UNIQUE_NUMERIC_PARTNER_ID,
   "rss_url": "https://www.theverge.com/rss/index.xml",
-  "max_slides_amount": 5,
+  "max_slides_amount": 7,
   "query_selector": "#element",
   "slide_duration": 4,
   "theme_color": "#2962ff",
@@ -263,4 +263,4 @@ Below there is a list of supported configuration parameters. <span class="highli
 
 Below there is an the example showing how Veedmo stories can be embedded on page using manual JavaScript configuration. Click on "Result" tab to see the result.
 
-<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qex6ckLm/19/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qex6ckLm/22/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
