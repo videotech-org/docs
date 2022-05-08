@@ -1,0 +1,146 @@
+/* ********************************* */
+/* General */
+/* ********************************* */
+
+:root {
+  --ifm-code-font-size: 90%;
+  --ifm-color-primary: #2962ff;
+  --ifm-color-white: #ffffff;
+  --ifm-color-black: #000000;
+}
+
+body {
+  font-size: var(--ifm-code-font-size);
+}
+
+table {
+  width: 100%;
+  display: table;
+}
+
+@media screen and (hover: none) {
+  table {
+    display: block;
+  }
+}
+
+table tr {
+  background-color: var(--ifm-color-white) !important;
+}
+
+.highlight--red {
+  color: #ff0000;
+}
+
+/* ********************************* */
+/* Header */
+/* ********************************* */
+
+.navbar,
+.navbar-sidebar__brand {
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+.navbar__brand:hover {
+  color: var(--ifm-color-black);
+}
+
+.navbar-sidebar__brand > div {
+  display: none !important;
+}
+
+.navbar__logo img {
+  width: 130px;
+}
+
+.navbar__title {
+  font-weight: normal !important;
+}
+
+.navbar__items--right > div {
+  display: none !important;
+}
+
+/* ********************************* */
+/* Left sidebar */
+/* ********************************* */
+
+.menu {
+  font-weight: normal;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.menu__list-item:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.menu__list-item.theme-doc-sidebar-item-link-level-1 {
+  font-weight: bold;
+}
+
+.menu__list-item-collapsible {
+  font-weight: bold;
+}
+
+.menu__list-item-collapsible:hover {
+  background: none !important;
+}
+
+.menu__list-item-collapsible > a {
+  color: var(--ifm-color-black) !important;
+}
+
+.menu__link {
+  color: var(--ifm-color-black);
+  background: none !important;
+}
+
+.menu__link:hover {
+  color: var(--ifm-color-primary);
+  background: none;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  color: var(--ifm-color-primary);
+}
+
+
+/* ********************************* */
+/* Code blocks */
+/* ********************************* */
+
+.prism-code {
+  white-space: pre-wrap;
+}
+
+/* ********************************* */
+/* Footer */
+/* ********************************* */
+
+.footer {
+  background-color: var(--ifm-color-white);
+}
+
+/* ********************************* */
+/* Custom styling for HTML elements */
+/* ********************************* */
+
+.columns {
+  display: inline-flex;
+  margin: 1em 0;
+  align-items: center;
+  width: 100%;
+}
+
+.columns.col-2 > div {
+  display: inline-flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.columns.col-2 > div p {
+  width: 100%;
+  margin-bottom: 0.5em;
+}
