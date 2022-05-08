@@ -8,7 +8,7 @@ const config = {
   title: 'Veedmo',
   tagline: 'Welcome to our products documentation',
   url: 'https://docs.veedmo.com',
-  baseUrl: '/veedmo-docs/0c8bb67063965bdc55da8fe7ede86402e20a55de/',
+  baseUrl: '/0c8bb67063965bdc55da8fe7ede86402e20a55de/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: '/img/favicon.png',
