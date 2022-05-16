@@ -180,6 +180,18 @@ Below there is a list of supported configuration parameters. <span class="highli
       </td>
     </tr>
     <tr>
+      <td><code>enable_utm_tracking_params</code></td>
+      <td>
+        Possible values:
+        <br />
+        <strong>0</strong> - do not append Veedmo UTM params to links
+        <br />
+        <strong>1</strong> - append Veedmo UTM params to links (<code>utm_source=veedmo-stories</code>, <code>utm_medium=veedmo-stories</code>, <code>utm_campaign=veedmo-stories</code>)
+        <br /><br />
+        If not defined, <strong>1</strong> (append Veedmo UTM params to links) will be used.
+      </td>
+    </tr>
+    <tr>
       <td><code>max_number_of_injected_ads</code></td>
       <td>
         Max. number of ads injected in stories. Cannot be greater than <code>max_slides_amount</code>.
@@ -263,4 +275,4 @@ Below there is a list of supported configuration parameters. <span class="highli
 
 Below there is an the example showing how Veedmo stories can be embedded on page using manual JavaScript configuration. Click on "Result" tab to see the result.
 
-<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qex6ckLm/22/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qex6ckLm/23/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
