@@ -100,11 +100,11 @@ Below there is a list of supported configuration parameters. <span class="highli
         <br /><br />
         Handles single URL, or XML content of ad tag, or multiple URLs / XMLs content, via waterfall mechanism.
         <br /><br />
-        To set up waterfall mechanism, pass array of objects, where each object contains ad tag URL / XML content, and a type (acceptable types are: <code>vast</code> - for ad tag URL(s), and <code>vastxml</code> - for ad XML(s) content).
+        To set up waterfall mechanism, pass array of objects, where each object contains ad tag URL / XML content, and a type (acceptable types are: <code>vast</code> - for VAST / VMAP ad tag URL(s), <code>vpaid</code> - for VPAID ad tag URL(s), <code>vastxml</code> - for ad XML(s) content).
         <br /><br />
         Example:
         <code>
-          "tag_url_desktop": [<br />
+          "tag_url_mobile": [<br />
           &nbsp;&nbsp;{"{"}
           <br />
           &nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_1 URL",
@@ -114,7 +114,14 @@ Below there is a list of supported configuration parameters. <span class="highli
           &nbsp;&nbsp;{"}"},<br />
           &nbsp;&nbsp;{"{"}
           <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_2 pure XML content",
+          &nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_2 URL",
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;type: "vpaid"
+          <br />
+          &nbsp;&nbsp;{"}"},<br />
+          &nbsp;&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_3 pure XML content",
           <br />
           &nbsp;&nbsp;&nbsp;&nbsp;type: "vastxml"
           <br />
@@ -133,7 +140,7 @@ Below there is a list of supported configuration parameters. <span class="highli
         <br /><br />
         Handles single URL, or XML content of ad tag, or multiple URLs / XMLs content, via waterfall mechanism.
         <br /><br />
-        To set up waterfall mechanism, pass array of objects, where each object contains ad tag URL / XML content, and a type (acceptable types are: <code>vast</code> - for ad tag URL(s), and <code>vastxml</code> - for ad XML(s) content).
+        To set up waterfall mechanism, pass array of objects, where each object contains ad tag URL / XML content, and a type (acceptable types are: <code>vast</code> - for VAST / VMAP ad tag URL(s), <code>vpaid</code> - for VPAID ad tag URL(s), <code>vastxml</code> - for ad XML(s) content).
         <br /><br />
         Example:
         <code>
@@ -147,7 +154,14 @@ Below there is a list of supported configuration parameters. <span class="highli
           &nbsp;&nbsp;{"}"},<br />
           &nbsp;&nbsp;{"{"}
           <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_2 pure XML content",
+          &nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_2 URL",
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;type: "vpaid"
+          <br />
+          &nbsp;&nbsp;{"}"},<br />
+          &nbsp;&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_3 pure XML content",
           <br />
           &nbsp;&nbsp;&nbsp;&nbsp;type: "vastxml"
           <br />
