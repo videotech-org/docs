@@ -506,7 +506,7 @@ Below there is a list of supported configuration parameters. <span class="highli
         <br />
         <strong>0</strong> - player will switch to floating mode after page visitor will pass it, while scrolling the page
         <br />
-        <strong>1</strong> - player will switch to floating mode after page visitor will pass it, while scrolling the page, and additionally straight after player was loaded on page (only if ad was returned by ad server, and player was loaded on page out of viewport)
+        <strong>1</strong> - player will switch to floating mode after page visitor will pass it, while scrolling the page, and additionally straight after player was loaded on page (only if player was loaded on page out of viewport)
         <br /><br />
         If not defined, <strong>0</strong> (switch to floating mode after page visitor will pass player, while scrolling the page) will be used.
         <br /><br />
