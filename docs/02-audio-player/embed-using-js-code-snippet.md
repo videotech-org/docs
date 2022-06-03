@@ -343,7 +343,7 @@ Below there is a list of supported configuration parameters. <span class="highli
       <td>
         Delays player load to wait for page visitor to accept page's privacy policies, in seconds.
         <br /><br />
-        If not defined, player on load (before requesting ad) will check page visitor's privacy policies consent status and use it when requesting ad.
+        If not defined, player on load (before requesting ad) will check (for 5 seconds) page visitor's privacy policies consent status and use it when requesting ad.
       </td>
     </tr>
     <tr>
