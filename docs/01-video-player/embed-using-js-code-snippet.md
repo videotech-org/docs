@@ -84,7 +84,23 @@ Below there is a list of supported configuration parameters. <span class="highli
       </td>
     </tr>
     <tr>
-      <td><code>ad_type</code> <span class="highlight--red"><strong>*</strong></span></td>
+      <td><code>video_url</code> <span class="highlight--red"><strong>*</strong></span></td>
+      <td>
+        URL of video file. Mandatory, if <code>ad_type</code> is set to <strong>1</strong>. Optional, if <code>ad_type</code> is set to <strong>0</strong>.
+      </td>
+    </tr>
+    <tr>
+      <td><code>responsive</code> <span class="highlight--red"><strong>*</strong></span></td>
+      <td>
+        Possible values:
+        <br />
+        <strong>1</strong> - player will resize to the parent container width
+        <br />
+        <strong>2</strong> - player will have fixed size (requires to set <code>width</code> param)
+      </td>
+    </tr>
+    <tr>
+      <td><code>ad_type</code></td>
       <td>
         Possible values:
         <br />
@@ -94,13 +110,15 @@ Below there is a list of supported configuration parameters. <span class="highli
       </td>
     </tr>
     <tr>
-      <td><code>tag_url_desktop</code> <span class="highlight--red"><strong>*</strong></span></td>
+      <td><code>tag_url_desktop</code></td>
       <td>
         URL(s) of ad tag(s), or pure XML(s) content of ad(s), to display on desktop devices. If empty, no ad(s) will be displayed on desktop devices.
         <br /><br />
         Handles single URL, or XML content of ad tag, or multiple URLs / XMLs content, via waterfall mechanism.
         <br /><br />
         To set up waterfall mechanism, pass array of objects, where each object contains ad tag URL / XML content, and a type (acceptable types are: <code>vast</code> - for VAST / VMAP ad tag URL(s), <code>vpaid</code> - for VPAID ad tag URL(s), <code>vastxml</code> - for ad XML(s) content).
+        <br /><br />
+        <code>ad_schedule_desktop</code> has priority over <code>tag_url_desktop</code> (if both are defined in config, which is not recommended or needed).
         <br /><br />
         Example:
         <code>
@@ -129,18 +147,18 @@ Below there is a list of supported configuration parameters. <span class="highli
           ],
         </code>
         Waterfall mechanism waits max. 5sec for each ad request to return response. If no ad, empty ad or ad error is returned, mechanism jumps to next ad tag, in set order, and performs request.
-        <br /><br />
-        Mandatory, if <code>ad_type</code> is set to <strong>0</strong>. Optional, if <code>ad_type</code> is set to <strong>1</strong>.
       </td>
     </tr>
     <tr>
-      <td><code>tag_url_mobile</code> <span class="highlight--red"><strong>*</strong></span></td>
+      <td><code>tag_url_mobile</code></td>
       <td>
         URL(s) of ad tag(s), or pure XML(s) content of ad(s), to display on mobile devices. If empty, no ad(s) will be displayed on mobile devices.
         <br /><br />
         Handles single URL, or XML content of ad tag, or multiple URLs / XMLs content, via waterfall mechanism.
         <br /><br />
         To set up waterfall mechanism, pass array of objects, where each object contains ad tag URL / XML content, and a type (acceptable types are: <code>vast</code> - for VAST / VMAP ad tag URL(s), <code>vpaid</code> - for VPAID ad tag URL(s), <code>vastxml</code> - for ad XML(s) content).
+        <br /><br />
+        <code>ad_schedule_mobile</code> has priority over <code>tag_url_mobile</code> (if both are defined in config, which is not recommended or needed).
         <br /><br />
         Example:
         <code>
@@ -169,24 +187,126 @@ Below there is a list of supported configuration parameters. <span class="highli
           ],
         </code>
         Waterfall mechanism waits max. 5sec for each ad tag request to return response. If no ad, empty ad or ad error is returned, mechanism jumps to next ad tag, in set order, and performs request.
+      </td>
+    </tr>
+    <tr>
+      <td><code>ad_schedule_desktop</code></td>
+      <td>
+        Ads schedule to display on desktop devices.
         <br /><br />
-        Mandatory, if <code>ad_type</code> is set to <strong>0</strong>. Optional, if <code>ad_type</code> is set to <strong>1</strong>.
+        It's an array of objects (ad breaks). Each ad break can have single ad tag (URL or XML) or multiple ad tags, via waterfall mechanism.
+        <br /><br />
+        <code>timeOffset</code> defines time moment in which ad break should be executed; can have following values: <strong>start</strong>, <strong>end</strong>, <strong>MM:SS</strong> (time stamp, e.g. 01:55), <strong>XXX%</strong> (percentage of video length, e.g. 50%).
+        <br /><br />
+        <code>ad_schedule_desktop</code> has priority over <code>tag_url_desktop</code> (if both are defined in config, which is not recommended or needed).
+        <br /><br />
+        Example:
+        <code>
+          "ad_schedule_desktop": [<br />
+          &nbsp;&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;timeOffset: "start",
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;ads: [<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_1 URL",
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: "vast"
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"}"},<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_2 URL",
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: "vast"
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"}"}<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;]<br />
+          &nbsp;&nbsp;{"}"},<br />
+          &nbsp;&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;timeOffset: "20%",
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;ads: [<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_3 URL",
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: "vast"
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"}"},<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_4 URL",
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: "vast"
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"}"}<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;]<br />
+          &nbsp;&nbsp;{"}"},<br />
+          ]
+        </code>
       </td>
     </tr>
     <tr>
-      <td><code>video_url</code> <span class="highlight--red"><strong>*</strong></span></td>
+      <td><code>ad_schedule_mobile</code></td>
       <td>
-        URL of video file. Mandatory, if <code>ad_type</code> is set to <strong>1</strong>. Optional, if <code>ad_type</code> is set to <strong>0</strong>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>responsive</code> <span class="highlight--red"><strong>*</strong></span></td>
-      <td>
-        Possible values:
-        <br />
-        <strong>1</strong> - player will resize to the parent container width
-        <br />
-        <strong>2</strong> - player will have fixed size (requires to set <code>width</code> param)
+        Ads schedule to display on mobile devices.
+        <br /><br />
+        It's an array of objects (ad breaks). Each ad break can have single ad tag (URL or XML) or multiple ad tags, via waterfall mechanism.
+        <br /><br />
+        <code>timeOffset</code> defines time moment in which ad break should be executed; can have following values: <strong>start</strong>, <strong>end</strong>, <strong>MM:SS</strong> (time stamp, e.g. 01:55), <strong>XXX%</strong> (percentage of video length, e.g. 50%).
+        <br /><br />
+        <code>ad_schedule_mobile</code> has priority over <code>tag_url_mobile</code> (if both are defined in config, which is not recommended or needed).
+        <br /><br />
+        Example:
+        <code>
+          "ad_schedule_mobile": [<br />
+          &nbsp;&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;timeOffset: "start",
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;ads: [<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_1 URL",
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: "vast"
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"}"},<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_2 URL",
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: "vast"
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"}"}<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;]<br />
+          &nbsp;&nbsp;{"}"},<br />
+          &nbsp;&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;timeOffset: "20%",
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;ads: [<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_3 URL",
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: "vast"
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"}"},<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url: "AD_TAG_4 URL",
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: "vast"
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"}"}<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;]<br />
+          &nbsp;&nbsp;{"}"},<br />
+          ]
+        </code>
       </td>
     </tr>
     <tr>
@@ -631,7 +751,7 @@ Below there is an the example showing how Veedmo video player can be embedded on
 
 ### Instream player example
 
-<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qfroesdy/104/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qfroesdy/111/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ### Outstream player example
 
