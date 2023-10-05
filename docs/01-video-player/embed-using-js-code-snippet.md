@@ -52,10 +52,14 @@ Specially prepared JavaScript code snippet (mentioned below) can be added to web
   "corner": "bl",
   "vertical_margin": 20,
   "horizontal_margin": 20,
-  "minimum_width": 140,
-  "maximum_width": 400,
-  "maximum_width_percent": 25,
-  "maximum_height_percent_mobile": 25,
+  "sticky": {
+    "desktop_width": "200",
+    "desktop_width_percent": "50",
+    "mobile_width": "120",
+    "mobile_height": "100",
+    "mobile_width_percent": "50",
+    "mobile_height_percent": "20",
+  }
 });
 ```
 
@@ -87,6 +91,28 @@ Below there is a list of supported configuration parameters. <span class="highli
       <td><code>video_url</code> <span class="highlight--red"><strong>*</strong></span></td>
       <td>
         URL of video file. Mandatory, if <code>ad_type</code> is set to <strong>1</strong>. Optional, if <code>ad_type</code> is set to <strong>0</strong>.
+      </td>
+    </tr>
+    <tr>
+      <td><code>video_urls</code></td>
+      <td>
+        Array of URLs of video files. Allows player to play video's playlist. Each video, after played, is remembered by web browser so viewer would always get fresh content from playlist (until playlist ends, then player resets it and plays videos as all would be fresh).
+        <br /><br />
+        Player config needs to have defined <code>video_url</code> or <code>video_urls</code>; when both are defined in player config, <code>video_urls</code> (playlist) has priority.
+        <br /><br />
+        Example:
+        <code>
+        "video_urls": [<br />
+        &nbsp;&nbsp;{"{"}<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"title": "Video 1",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"src": "https://example.com/video-file-1.mp4"<br />
+        &nbsp;&nbsp;{"}"},<br />
+        &nbsp;&nbsp;{"{"}<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"title": "Video 2",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"src": "https://example.com/video-file-2.mp4"<br />
+        &nbsp;&nbsp;{"}"},<br />
+        ]
+        </code>
       </td>
     </tr>
     <tr>
@@ -380,16 +406,6 @@ Below there is a list of supported configuration parameters. <span class="highli
       </td>
     </tr>
     <tr>
-      <td><code>maximum_height_percent_mobile</code></td>
-      <td>
-        Max. height of floating player (<code>position</code> set to <strong>2</strong> or <strong>3</strong>) on mobile devices only, in percentage (%) - value relative to mobile device screen height.
-        <br /><br />
-        If set to <strong>0</strong>, or not defined at all, the player will set its height automatically, based on video size.
-        <br /><br />
-        Recommended setting: <strong>20</strong> or <strong>25</strong> (to keep player in viewport, maximize viewability, and not annoy visitor).
-      </td>
-    </tr>
-    <tr>
       <td><code>position</code></td>
       <td>
         Possible values:
@@ -440,27 +456,30 @@ Below there is a list of supported configuration parameters. <span class="highli
       </td>
     </tr>
     <tr>
-      <td><code>minimum_width</code></td>
+      <td><code>sticky</code></td>
       <td>
-        Floating player min. width, in pixels (px). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>.
+        Floating player size on desktop and mobile.
         <br /><br />
-        If not defined, <strong>140</strong> (140px) will be used.
-      </td>
-    </tr>
-    <tr>
-      <td><code>maximum_width</code></td>
-      <td>
-        Floating player max. width, in pixels (px). Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>.
+        If both, absolute and percentage parameters are present in config, absolute parameters values overrides percentage parameters values.
         <br /><br />
-        If not defined, <strong>500</strong> (500px) will be used.
-      </td>
-    </tr>
-    <tr>
-      <td><code>maximum_width_percent</code></td>
-      <td>
-        Floating player width, in percentage (%) - value relative to screen width. Required only if <code>position</code> is set to <strong>2</strong> or <strong>3</strong>.
-        <br /><br />
-        If not defined, <strong>30</strong> (30%) will be used.
+        Example:
+        <code>
+          sticky:&nbsp;{"{"}
+          <br />
+          &nbsp;&nbsp;"desktop_width": "200",
+          <br />
+          &nbsp;&nbsp;"desktop_width_percent": "30",
+          <br />
+          &nbsp;&nbsp;"mobile_width": "150",
+          <br />
+          &nbsp;&nbsp;"mobile_height": "100",
+          <br />
+          &nbsp;&nbsp;"mobile_width_percent": "25",
+          <br />
+          &nbsp;&nbsp;"mobile_height_percent": "20",
+          <br />
+          {"}"},<br />
+        </code>
       </td>
     </tr>
     <tr>
@@ -751,7 +770,7 @@ Below there is an the example showing how Veedmo video player can be embedded on
 
 ### Instream player example
 
-<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qfroesdy/111/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="600" src="//jsfiddle.net/veedmo/qfroesdy/113/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ### Outstream player example
 
